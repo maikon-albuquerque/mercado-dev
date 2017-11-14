@@ -1,18 +1,29 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+
+import HeaderHome from './HeaderHome'
+import AnuncioHome from './AnuncioHome'
+import LinkCategoria from './LinkCategoria'
+import Footer from './Footer'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <HeaderHome />
+        <div className="container">
+        <h3>Ultimos Anúncios</h3>
+        <div className="row">
+        <AnuncioHome />
+        <AnuncioHome />
+        <AnuncioHome />
+        </div>
+        <h3>Categorias</h3>
+        <LinkCategoria />
+        <LinkCategoria />
+        <LinkCategoria />
+        <LinkCategoria />
+        </div>
+        <Footer />
       </div>
     );
   }
